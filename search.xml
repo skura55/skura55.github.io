@@ -29,6 +29,9 @@
 
 
 ]]></content>
+      <categories>
+        <category>话不投机半句多</category>
+      </categories>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -47,5 +50,8 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
   </entry>
 </search>
