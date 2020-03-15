@@ -20,23 +20,24 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="欢迎来到我的博客主页,博主是一个刚学完前端的小透明 我讲个故事可别当真 小主读书不多,想法很大 希望在学校沉淀一段时间后,出去能在字节跳动工作 毕业季希望能实现去日本旅行的小心愿 去看看天空树,拜访一下明治神宫 希望以后能有自己的一间咖啡店 做自己喜欢的事情 生活是自己的,别沉寂. 希望能交到更多做web前端的伙伴 看下面,开始我们的故事吧">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于sjhv-ENn">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+  <meta name="description" content="这篇文章时建立在个人博客已经部署好了的情况下,想自定义域名访问自己的博客,接下来我介绍一下过程 1.购买域名并实名认证作为一个网络爱好者,怎么能没有自己的域名呢.域名一年也不贵,几十块钱.我是在阿里云购买并且实名的.看缘分,实名可能一会也可能几天.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo绑定域名">
+<meta property="og:url" content="http://yoursite.com/2020/03/15/Custom/index.html">
 <meta property="og:site_name" content="sjhv的博客">
-<meta property="og:description" content="欢迎来到我的博客主页,博主是一个刚学完前端的小透明 我讲个故事可别当真 小主读书不多,想法很大 希望在学校沉淀一段时间后,出去能在字节跳动工作 毕业季希望能实现去日本旅行的小心愿 去看看天空树,拜访一下明治神宫 希望以后能有自己的一间咖啡店 做自己喜欢的事情 生活是自己的,别沉寂. 希望能交到更多做web前端的伙伴 看下面,开始我们的故事吧">
+<meta property="og:description" content="这篇文章时建立在个人博客已经部署好了的情况下,想自定义域名访问自己的博客,接下来我介绍一下过程 1.购买域名并实名认证作为一个网络爱好者,怎么能没有自己的域名呢.域名一年也不贵,几十块钱.我是在阿里云购买并且实名的.看缘分,实名可能一会也可能几天.">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200314140003685.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70#pic_center">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200314134921493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200314135022825.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-03-14T06:03:07.470Z">
-<meta property="article:modified_time" content="2020-03-14T06:03:07.470Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200315124931126.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200315125519686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020031512582991.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200315130059926.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-03-15T05:04:06.434Z">
+<meta property="article:modified_time" content="2020-03-15T05:10:32.262Z">
 <meta property="article:author" content="sjhv-ENn">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200314140003685.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70#pic_center">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200315124931126.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70">
 
-<link rel="canonical" href="http://yoursite.com/about/">
+<link rel="canonical" href="http://yoursite.com/2020/03/15/Custom/">
 
 
 <script id="page-configurations">
@@ -44,12 +45,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false
+    isPost : true
   };
 </script>
 
-  <title>关于sjhv-ENn | sjhv的博客
-  </title>
+  <title>hexo绑定域名 | sjhv的博客</title>
   
 
 
@@ -185,69 +185,99 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
           <div class="content">
             
 
   <div class="posts-expand">
-    
-    
-    
-    <div class="post-block" lang="zh-CN">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/15/Custom/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="sjhv-ENn">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sjhv的博客">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          hexo绑定域名
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">关于sjhv-ENn
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2020-03-15 13:04:06 / 修改时间：13:10:32" itemprop="dateCreated datePublished" datetime="2020-03-15T13:04:06+08:00">2020-03-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong>这篇文章时建立在个人博客已经部署好了的情况下,想自定义域名访问自己的博客,接下来我介绍一下过程</strong></p>
+<p><strong>1.购买域名并实名认证</strong><br>作为一个网络爱好者,怎么能没有自己的域名呢.域名一年也不贵,几十块钱.我是在<a href="https://www.aliyun.com" target="_blank" rel="noopener">阿里云</a>购买并且实名的.看缘分,实名可能一会也可能几天.</p>
+<a id="more"></a>
+<p><strong>2.域名解析</strong><br><img src="https://img-blog.csdnimg.cn/20200315124931126.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>3采用CNAME(个人意愿选择)</strong><br>主机记录我填的是www  ,还有@,*.<br>CNAME记录的记录值设置成域名，如果绑定coding,就是coding部署静态网站成功后提供的访问地址<br>TIL默认10分钟<br>解析线路默认<br><img src="https://img-blog.csdnimg.cn/20200315125519686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>解析成功后就是这样</p>
+<p><strong>4.绑定域名</strong><br>在coding上,进入项目点击左边 构建与部署–&gt;静态网站,右上角点击设置,下拉到最下面就是域名绑定.<br><img src="https://img-blog.csdnimg.cn/2020031512582991.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>在github上绑定域名 进入个人仓库 点击 setting .你的可能是英文网页的(果断选择谷歌翻译 或者找到GitHub Pages   —&gt;Custom domain就是绑定域名)<br><img src="https://img-blog.csdnimg.cn/20200315130059926.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>域名绑定就介绍到这里啦</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/15/hexo-geater/" rel="prev" title="hexo部署优化(hexo+coding+github)">
+      <i class="fa fa-chevron-left"></i> hexo部署优化(hexo+coding+github)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/03/15/github_hexo/" rel="next" title="hexo+github博客搭建">
+      hexo+github博客搭建 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <p><img src="https://img-blog.csdnimg.cn/20200314140003685.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<br/>
-<center>欢迎来到我的博客主页,博主是一个刚学完前端的小透明</center>
-<center>我讲个故事可别当真</center>
-<center>小主读书不多,想法很大</center>
-<center>希望在学校沉淀一段时间后,出去能在字节跳动工作</center>
-<center>毕业季希望能实现去日本旅行的小心愿</center>
-<center>去看看天空树,拜访一下明治神宫</center>
-<center>希望以后能有自己的一间咖啡店</center>
-<center>做自己喜欢的事情</center>
-<center>生活是自己的,别沉寂.</center>
-<center>希望能交到更多做web前端的伙伴</center>
-<center>看下面,开始我们的故事吧</center>
-
-
-<br/>
-<br/>
-<table>
-    <tr>
-        <td ><center><img src="https://img-blog.csdnimg.cn/20200314134921493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70 " width="100" align="center"> </center></td>
-        <td ><center><img src="https://img-blog.csdnimg.cn/20200314135022825.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" width="100" align="center"></center></td>
-    </tr>
-<table>
-
-
-
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
   </div>
 
 
