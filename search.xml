@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>深夜故事第一番</title>
+    <url>/2020/03/15/story1/</url>
+    <content><![CDATA[<p>在大学学习一段时间后,发现自己并不喜欢自己的专业,虽然同为计算机.但我更爱设计,辗转反侧之后决定步入Web前端.断断续续半年的学习,终于熬了出来.</p>
+<p>做计算机的总是和熬夜离不开,在深夜总是人多愁善感的时候.某一天萌生了搭建博客来记录我的生活,便一步一步踏进博客设计中.</p>
+<a id="more"></a>
+<p>我觉得写博文真的是一件非常快乐的事情，虽然可能没有听众，但是把自己知道的，摸索出来的东西写下来，分享出来，并不单单是想要别人来看，更有一种记录生活的感觉。</p>
+<p>选择自己搭建个人博客，势必会走上一条曲折的道路。自己跟着教程一步步走下来，最后得到的，却也许并不是原先期望的那样。不喜欢折腾的人也许就会将就着用下去，但我倔强地坚持要得到我想要的。自己不断寻找问题，解决问题，那么在解决的那一刻真的是浑身舒畅。但是然后呢？我选择把整个过程或是解决方案记录下来，放在博客里。每次折腾势必会看到，告诉我自己已经解决了那么多的困难，这一次也一定能成功。它能够激励我不断走下去。</p>
+<p>人们喜欢拍照，录像，通过照片与视频将生活记录下来。而我觉得，通过文字记录生活更是一个不错的选择。况且上传到博客上，说不定哪天就有人看到，留下自己的看法，或者能够一起讨论，似乎也很美好。</p>
+<p>我喜欢通过不一样的方式来让别人了解我,我喜欢听故事,也喜欢讲故事,故事里有喜有愁,有悲有感.</p>
+<p>我的深夜番从今晚就开始了,故事里的事总会有有缘人来品味.本站没有访问记录,更没有评论. </p>
+<p>看完故事,你还是你,我还是我. </p>
+<p>我爱深夜贩卖故事,我们素不相识</p>
+]]></content>
+      <categories>
+        <category>我在深夜贩卖故事</category>
+      </categories>
+  </entry>
+  <entry>
     <title>hexo+github博客搭建</title>
     <url>/2020/03/15/github_hexo/</url>
     <content><![CDATA[<p><strong>1.搭建环境配置</strong><br>Node.js的安装和准备<br>Git的安装和准备<br>gitHub账户的配置</p>
-<p><strong>2.安装Hexo</strong><br>例如我是在 E:\hexo文件夹弄<br>进入该目录 npm install hexo-cli-g<br><img src="https://img-blog.csdnimg.cn/20200315131750171.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>2.安装Hexo</strong><br>例如我是在 E:\hexo文件夹弄</p>
 <a id="more"></a>
+<p>进入该目录 npm install hexo-cli-g<br><img src="https://img-blog.csdnimg.cn/20200315131750171.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>有个WARN,但不影响我们操作<br>接着输入 npm install hexo –save<br>在命令行中输入 hexo-v 看是否安装好了<br><img src="https://img-blog.csdnimg.cn/2020031513193188.png" alt="在这里插入图片描述"></p>
 <p><strong>3.初始化hexo</strong></p>
 <p>输入 hexo init<br>在输入 npm install<br>之后npm将会自动安装你需要的组件，只需要等待</p>
@@ -40,7 +59,7 @@
 <p><strong>2.域名解析</strong><br><img src="https://img-blog.csdnimg.cn/20200315124931126.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p><strong>3采用CNAME(个人意愿选择)</strong><br>主机记录我填的是www  ,还有@,*.<br>CNAME记录的记录值设置成域名，如果绑定coding,就是coding部署静态网站成功后提供的访问地址<br>TIL默认10分钟<br>解析线路默认<br><img src="https://img-blog.csdnimg.cn/20200315125519686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>解析成功后就是这样</p>
 <p><strong>4.绑定域名</strong><br>在coding上,进入项目点击左边 构建与部署–&gt;静态网站,右上角点击设置,下拉到最下面就是域名绑定.<br><img src="https://img-blog.csdnimg.cn/2020031512582991.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>在github上绑定域名 进入个人仓库 点击 setting .你的可能是英文网页的(果断选择谷歌翻译 或者找到GitHub Pages   —&gt;Custom domain就是绑定域名)<br><img src="https://img-blog.csdnimg.cn/20200315130059926.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>域名绑定就介绍到这里啦</p>
+<p>在github上绑定域名 (在git上绑定建议参照CSDN,这里可能有BUG)<br>在仓库里添加CNAME文件并在文件中填写绑定的域名,文件里填写的内容：要绑定的域名（不要包含Http://和www）<br> 点击 setting .你的可能是英文网页的(果断选择谷歌翻译 或者找到GitHub Pages   —&gt;Custom domain就是绑定域名)<br><img src="https://img-blog.csdnimg.cn/20200315130059926.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>域名绑定就介绍到这里啦</p>
 ]]></content>
       <categories>
         <category>Hexo</category>
@@ -51,8 +70,9 @@
     <url>/2020/03/15/hexo-geater/</url>
     <content><![CDATA[<p><strong>这篇文章时建立在hexo已经成功部署在github上的优化</strong></p>
 <p>为了解决个人博客在github上访问慢的问题,我尝试在coding上部署了我的博客,果然国内的访问快多了.接下来我就大概说说我的部署过程</p>
-<p><strong>1.注册coding</strong><br>使用之前，需要在<a href="https://coding.net/" target="_blank" rel="noopener">coding</a>注册账号，登陆，体验个人版就可以了，免费。团队名和登录地址最好一样.<br><strong>2.创建项目</strong><br><a href="https://sjhv.coding.net/user/projects/create" target="_blank" rel="noopener">项目创建</a><br><img src="https://img-blog.csdnimg.cn/20200315114241509.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>1.注册coding</strong><br>使用之前，需要在<a href="https://coding.net/" target="_blank" rel="noopener">coding</a>注册账号，登陆，体验个人版就可以了，免费。团队名和登录地址最好一样. </p>
 <a id="more"></a>
+<p><strong>2.创建项目</strong><br><a href="https://sjhv.coding.net/user/projects/create" target="_blank" rel="noopener">项目创建</a><br><img src="https://img-blog.csdnimg.cn/20200315114241509.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>或者<img src="https://img-blog.csdnimg.cn/2020031512193320.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>项目名称：与你的用户名相同，用户名就是你的团队名 .项目地址就是你的登录地址(一开始就应该有).看意愿是否公开源代码.项目描述可有可无,最后点击创建项目.</p>
 <p><strong>3.添加SSH Key</strong><br>由于之前部署到GitHub的时候，就创建了SSH Key了，这里就不需要重复创建了，直接使用之前的就可以了。没有创建的先去创建(网上一搜一堆)<br><img src="https://img-blog.csdnimg.cn/20200315114854686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>大概创建方法就是这样.<br>有了公钥之后,点击右上角的个人账号 —&gt; 个人设置 —&gt; SSH公钥 —&gt; 新增公钥。<br>默认的公钥路径为C/Users(用户)/用户名/.ssh，在.ssh文件中公钥文件为id_rsa.pub，复制内容添加进去就可以了。添加完成后以后上传代码的时候，就不再需要输入账号密码了。</p>
