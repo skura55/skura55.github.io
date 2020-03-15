@@ -4,16 +4,16 @@
     <title>hexo+github博客搭建</title>
     <url>/2020/03/15/github_hexo/</url>
     <content><![CDATA[<p><strong>1.搭建环境配置</strong><br>Node.js的安装和准备<br>Git的安装和准备<br>gitHub账户的配置</p>
-<p><strong>2.安装Hexo</strong><br>例如我是在 E:\hexo文件夹弄<br>进入该目录 npm install hexo-cli-g<br><img src="https://img-blog.csdnimg.cn/20200315131750171.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>有个WARN,但不影响我们操作<br>接着输入 npm install hexo –save<br>在命令行中输入 hexo-v 看是否安装好了<br><img src="https://img-blog.csdnimg.cn/2020031513193188.png" alt="在这里插入图片描述"></p>
+<p><strong>2.安装Hexo</strong><br>例如我是在 E:\hexo文件夹弄<br>进入该目录 npm install hexo-cli-g<br><img src="https://img-blog.csdnimg.cn/20200315131750171.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <a id="more"></a>
-
+<p>有个WARN,但不影响我们操作<br>接着输入 npm install hexo –save<br>在命令行中输入 hexo-v 看是否安装好了<br><img src="https://img-blog.csdnimg.cn/2020031513193188.png" alt="在这里插入图片描述"></p>
 <p><strong>3.初始化hexo</strong></p>
 <p>输入 hexo init<br>在输入 npm install<br>之后npm将会自动安装你需要的组件，只需要等待</p>
 <p>输入 hexo g<br>输入 hexo s<br>这里默认你已经配置好了github仓库</p>
 <p>在浏览器中打开<a href="http://localhost:4000/，你将会看到" target="_blank" rel="noopener">http://localhost:4000/，你将会看到</a><br><img src="https://img-blog.csdnimg.cn/20200315132159268.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>到目前为止，Hexo在本地的配置已经全都结束了</p>
 <p><strong>4.配置git个人信息</strong></p>
 <p>如果你之前已经配置好git个人信息，请跳过这一个步骤<br>设置Git的user name和email<br>生成密钥</p>
-<p><strong>5.配置Deployment</strong><br>在站点文件下找到_config.yml文件,ctrl+f搜索deploy<br>配置deploy如下<br>deploy:<br>    type: git<br>    repo:github仓库地址<br>    branch: master</p>
+<p><strong>5.配置Deployment</strong><br>在站点文件下找到_config.yml文件,ctrl+f搜索deploy<br>配置deploy如下<br>deploy:<br>    type: git<br>    repo: github仓库地址<br>    branch: master</p>
 <p>注意需要安装一个扩展：<br>npm install hexo-deployer-git –save<br>如果没有执行者行命令，将会提醒<br>deloyer not found:git</p>
 <p>执行hexo new &lt;模板&gt; &lt;文章名&gt;<br>其中&lt;模板&gt;在scaffolds中，默认情况下有三个模板post(新建文章)、draft(新建草稿)、page(新建页面)  —&gt;  通常情况下使用 hexo new post 文章名</p>
 <p>这时候在我的 电脑的目录下 F:\hexo\source\ _posts 将会看到  article title.md 文件用MarDown编辑器打开就可以编辑文章了。</p>
