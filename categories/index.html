@@ -209,10 +209,10 @@
       <div class="post-body">
           <div class="category-all-page">
             <div class="category-all-title">
-              目前共计 3 个分类
+              目前共计 4 个分类
             </div>
             <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%88%91%E5%9C%A8%E6%B7%B1%E5%A4%9C%E8%B4%A9%E5%8D%96%E6%95%85%E4%BA%8B/">我在深夜贩卖故事</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%9D%E4%B8%8D%E6%8A%95%E6%9C%BA%E5%8D%8A%E5%8F%A5%E5%A4%9A/">话不投机半句多</a><span class="category-list-count">2</span></li></ul>
+              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%88%91%E5%9C%A8%E6%B7%B1%E5%A4%9C%E8%B4%A9%E5%8D%96%E6%95%85%E4%BA%8B/">我在深夜贩卖故事</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%9D%E4%B8%8D%E6%8A%95%E6%9C%BA%E5%8D%8A%E5%8F%A5%E5%A4%9A/">话不投机半句多</a><span class="category-list-count">2</span></li></ul>
             </div>
           </div>
         
@@ -231,6 +231,11 @@
 
           </div>
           
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80OTEyNy8yNTYyMQ=="></div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -292,14 +297,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
@@ -419,6 +424,22 @@
   
 
   
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
 
 
   
