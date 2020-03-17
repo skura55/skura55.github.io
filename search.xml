@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo评论系统精选</title>
+    <url>/2020/03/18/hexo3/</url>
+    <content><![CDATA[<p>在博客搭建好之后,我试了几款评论系统,最终还是认为Valine好用.</p>
+<p>来比力用起来实在是不方便,要用户登录,有延迟,容易卡顿.</p>
+<p>其他的要么需要备案,付费等等,过程比较麻烦</p>
+<p>还是Valine比较轻巧,用户可以匿名评论,链接第三方邮箱等</p>
+<a id="more"></a>
+<p>我来介绍一下过程吧</p>
+<p><strong>1.注册Leancloud</strong></p>
+<p><a href="https://www.leancloud.cn/" target="_blank" rel="noopener">LeanCloud官网</a></p>
+<p>评论系统其实是放在Leancloud上的，因此首先需要去注册一个账号,现在需要实名.</p>
+<p>注册完以后需要创建一个应用，名字随意 ，然后进入应用-&gt;设置-&gt;应用key<br>获取你的appid 和 appkey</p>
+<p><strong>2.博客主题配置文件配置</strong><br>拿到你的appid和appkey之后，打开主题配置文件 搜索 valine，填入appid 和 appkey ,   enable记得改成:true</p>
+<p><strong>3.配置域名</strong><br>在Leancloud -&gt; 设置 -&gt; 安全中心 -&gt; Web 安全域名 把域名加进去</p>
+<p><strong>4,部署上线</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>本章就介绍到这里</p>
+<p>おやすみなさい</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+  </entry>
+  <entry>
     <title>教你用canvas写动态满天星(精解)</title>
     <url>/2020/03/17/Js2/</url>
     <content><![CDATA[<p>本篇我码了一个小特效给大家.</p>
