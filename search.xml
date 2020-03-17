@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>一起互窜博客吧</title>
+    <url>/2020/03/17/talk2/</url>
+    <content><![CDATA[<p><strong>交换友链请先添加本站为友链</strong></p>
+<pre><code>本站名称: sjhv的杂货店
+本站网址: https://www.sjhv.top/</code></pre><p><strong>在留言板留下贵站的地址和名称,小博主确认后会立即添加</strong><br><strong>欢迎回访互窜</strong></p>
+<a id="more"></a>
+<p>链接更新或者失效及时留言噢,博主会实时更新</p>
+]]></content>
+      <categories>
+        <category>话不投机半句多</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>hexo高级(博客收录到百度)</title>
+    <url>/2020/03/17/hexo2/</url>
+    <content><![CDATA[<p>我们写博客的原因,一方面是写下我们的生活日志,分享我们的学习等等.另一方面,就是希望更多人能从自己博客中获取有用的东西,全民共享.<br>目前为止,我们的博客都是在百度上搜索不到的,所以我们需要让百度收录我们的博客.</p>
+<a id="more"></a>
+
+<p>这里我引用一篇知乎文章(好记性不如赖知乎,今日状态不佳,就不码字了,作幅画给观众老爷吧 &gt;.&lt; ),上面的方法很详细.有需要的小伙伴可以参考参考——–<a href="https://zhuanlan.zhihu.com/p/111773896" target="_blank" rel="noopener">收录博客</a>.</p>
+<p><img src="https://img-blog.csdnimg.cn/20200317134459376.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Vue学习篇(指令篇)</title>
+    <url>/2020/03/17/vue2/</url>
+    <content><![CDATA[<p><strong>Tip</strong>:在vue的前期学习中,我们还暂时用不到脚手架,所以我们才开始会从外部引入vue的方式来练习.下面我就来介绍一下vue的常用指令.</p>
+<a id="more"></a>
+<p>在<a href="https://cn.vuejs.org/v2/api/#v-text" target="_blank" rel="noopener">vue官网</a>中,给我们提供了全套的学习资料.我们可以作为学习的参考.</p>
+<p><strong>1.引入vue</strong><br>    我们这里以Html文件来讲,从外部引入vue.<br>    在body体中,引入以下代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;app&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.bootcss.com&#x2F;vue&#x2F;2.6.10&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">        &#x2F;&#x2F; 没有用脚手架之前 </span><br><span class="line">            &#x2F;&#x2F; 1.引入Vue数据库</span><br><span class="line">            &#x2F;&#x2F; 2.挂载我们的组件</span><br><span class="line"></span><br><span class="line">        new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line"></span><br><span class="line">            data()&#123;</span><br><span class="line">                return&#123;&#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>2.指令练习</strong><br>这里简单介绍一部分指令,其他的指令大同小异,可在vue官网参考</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line"></span><br><span class="line">        &lt;h1&gt;&#123;&#123;demo1&#125;&#125;&lt;&#x2F;h1&gt;&#123;&#123;demo2&#125;&#125;</span><br><span class="line">        &lt;!-- &#123;&#123;&#125;&#125; 插值符号  主要用于插入我们想要的数组 等等 --&gt;</span><br><span class="line"></span><br><span class="line">        &lt;p&gt;&#123;&#123;demo3.split(&quot;&quot;).reverse().join()&#125;&#125;&lt;&#x2F;p&gt;</span><br><span class="line">        &lt;!-- 在插值符号中  是可以写js逻辑代码的 --&gt;</span><br><span class="line"></span><br><span class="line">        &lt;p v-text&#x3D;&quot;demo4&quot;&gt;&lt;&#x2F;p&gt;</span><br><span class="line">        &lt;p v-html&#x3D;&quot;demo5&quot;&gt;&lt;&#x2F;p&gt;</span><br><span class="line">        &lt;!-- text中 只能解析数据  html中还可以解析标签 --&gt;</span><br><span class="line"></span><br><span class="line">        &lt;p v-show&#x3D;&quot;demo6&quot;&gt;&#123;&#123;demo2&#125;&#125;&lt;&#x2F;p&gt;</span><br><span class="line">        &lt;!-- show的本质就相当于是display:none  or other  --&gt;</span><br><span class="line"></span><br><span class="line">        &lt;p v-if&#x3D;&quot;demo7&#x3D;&#x3D;&#x3D;&#39;m&#39;&quot;&gt;if中的判断哦&lt;&#x2F;p&gt;</span><br><span class="line">        &lt;p v-else-if&#x3D;&quot;demo7 &#x3D;&#x3D;&#x3D; &#39;v&#39;&quot;&gt;else中的判断哦&lt;&#x2F;p&gt;</span><br><span class="line">        &lt;p v-else&#x3D;&quot;&quot;&gt;else中的判断哦&lt;&#x2F;p&gt;</span><br><span class="line">        &lt;!-- 在if中 本质也是true与false的判断 --&gt;</span><br><span class="line"></span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">            &lt;li v-for&#x3D;&quot;(value,key,index) in demo8&quot;&gt; &#123;&#123;value&#125;&#125; &#123;&#123;key&#125;&#125; &#123;&#123;index&#125;&#125;&lt;&#x2F;li&gt;</span><br><span class="line">            &lt;br&#x2F;&gt;</span><br><span class="line">            &lt;li v-for&#x3D;&quot;(value,index) in demo9&quot;&gt;&#123;&#123;index&#125;&#125; &#123;&#123;value&#125;&#125;&lt;&#x2F;li&gt;</span><br><span class="line">            &lt;!-- for in 中主要是遍历的作用  遍历键值对 以及下标 或者是数组当中的值 下标 --&gt;</span><br><span class="line">        &lt;&#x2F;ul&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.bootcss.com&#x2F;vue&#x2F;2.6.10&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        &#x2F;&#x2F; 没有用脚手架之前 </span><br><span class="line">            &#x2F;&#x2F; 1.引入Vue数据库</span><br><span class="line">            &#x2F;&#x2F; 2.挂载我们的组件</span><br><span class="line"></span><br><span class="line">        new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line"></span><br><span class="line">            data()&#123;</span><br><span class="line">                return&#123;</span><br><span class="line">                    &#x2F;&#x2F; vue里面的return是&#123; &#125;   在react里面是()</span><br><span class="line">                    demo1:&quot;fighting的一天&quot;,</span><br><span class="line">                    demo2:&quot;我死于昨天,重生于今天&quot;,</span><br><span class="line">                    demo3:&quot;1234&quot;,</span><br><span class="line">                    demo4:&quot;新的内容&quot;,</span><br><span class="line">                    demo5:&quot;&lt;h3&gt;旧的内容&lt;&#x2F;h3&gt;&quot;,</span><br><span class="line">                    demo6:false,</span><br><span class="line">                    demo7:&quot;m&quot;,</span><br><span class="line">                    demo8:&#123;</span><br><span class="line">                        name:&quot;sjh&quot;,</span><br><span class="line">                        sex:&quot;男&quot;,</span><br><span class="line">                        age:&quot;18&quot;</span><br><span class="line">                    &#125;,</span><br><span class="line">                    demo9:[&quot;小啊&quot;,&quot;小白&quot;,&quot;小黑&quot;]</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
+<br/>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">    &lt;style&gt;</span><br><span class="line">        .css&#123;</span><br><span class="line">            background-color: skyblue;</span><br><span class="line">        &#125;</span><br><span class="line">        .sjh&#123;</span><br><span class="line">            background-color: grey;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;h1&gt;&#123;&#123;demo1&#125;&#125;&lt;&#x2F;h1&gt;</span><br><span class="line"></span><br><span class="line">        &lt;p v-text&#x3D;&quot;num&quot;&gt;&lt;&#x2F;p&gt;</span><br><span class="line">        &lt;p&gt;&#123;&#123;num&#125;&#125;&lt;&#x2F;p&gt;</span><br><span class="line">        &lt;button v-on:click&#x3D;&#39;onAdd&#39;&gt;+&lt;&#x2F;button&gt;</span><br><span class="line">        &lt;button v-on:click&#x3D;&quot;onReduce&quot;&gt;-&lt;&#x2F;button&gt;</span><br><span class="line">        &lt;button @click.once&#x3D;&quot;onAdd&quot;&gt;加&lt;&#x2F;button&gt;</span><br><span class="line">        &lt;!-- once就是只绑定一次 之后就会被销毁 --&gt;</span><br><span class="line">        &lt;!-- 这里要注意  有时候直接用插值符号 是不会发生改变的 要用到text v-on的简写@ --&gt;</span><br><span class="line"></span><br><span class="line">        &lt;button @keyup.13&#x3D;&quot;onAdd&quot;&gt;点击&lt;&#x2F;button&gt;</span><br><span class="line">        &lt;!-- 这里要是用到键盘 就可以写键码  13是enter的键码--&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;form action&#x3D;&quot;https:&#x2F;&#x2F;www.baidu.com&#x2F;?&quot; @submit.stop.prevent&gt;</span><br><span class="line">            &lt;button&gt;点击跳转&lt;&#x2F;button&gt;</span><br><span class="line">        &lt;&#x2F;form&gt;</span><br><span class="line">        &lt;!-- @submit.stop.prevent 是禁止默认事件 和 Js中的 preventDefault() 效果一样 --&gt;</span><br><span class="line"></span><br><span class="line">        &lt;p v-bind:class&#x3D;&quot;demo3&quot;&gt;demo3&lt;&#x2F;p&gt;</span><br><span class="line">        &lt;p :class&#x3D;&quot;[&#39;css&#39;]&quot;&gt;class类名绑定&lt;&#x2F;p&gt;  </span><br><span class="line">        </span><br><span class="line">        &lt;p :style&#x3D;&quot;demo4&quot;&gt;我来了&lt;&#x2F;p&gt;</span><br><span class="line">        &lt;div :style&#x3D;&quot;&#123;width:&#39;50px&#39;,height:&#39;50px&#39;,backgroundColor:&#39;orange&#39;,fontSize&#125;&quot;&gt;999&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.bootcss.com&#x2F;vue&#x2F;2.6.10&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line"></span><br><span class="line">        new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line"></span><br><span class="line">            data()&#123;</span><br><span class="line">                return&#123;</span><br><span class="line">                    demo1:&quot;指令2的复习&quot;,</span><br><span class="line">                    num:0,</span><br><span class="line">                    demo3:&quot;sjh&quot;,</span><br><span class="line">                    demo4:&quot;background-color:red&quot;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            methods:&#123;</span><br><span class="line">                onAdd()&#123;</span><br><span class="line">                    this.num++</span><br><span class="line">                    console.log(this.num)</span><br><span class="line">                &#125;,</span><br><span class="line">                onReduce()&#123;</span><br><span class="line">                    this.num--</span><br><span class="line">                    console.log(this.num)</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>多次练习,熟悉指令</strong><br>注意颈椎和头发<br>vue指令就简单介绍到这里啦</p>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Vue学习篇(介绍)</title>
     <url>/2020/03/16/vue1/</url>
     <content><![CDATA[<p>好啦,新搭建的博客功能也基本上陆续上线了,在这之后博主不仅会时常分享小故事,还是把自己学习的总结撰写成文章,方便各位看官参考.可能会有不足或者错误.希望朋友们能多多指点.</p>
@@ -169,6 +218,9 @@
       <categories>
         <category>话不投机半句多</category>
       </categories>
+      <tags>
+        <tag>me</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
