@@ -20,19 +20,21 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="在大学学习一段时间后,发现自己并不喜欢自己的专业,虽然同为计算机.但我更爱设计,辗转反侧之后决定步入Web前端.断断续续半年的学习,终于熬了出来. 做计算机的总是和熬夜离不开,在深夜总是人多愁善感的时候.某一天萌生了搭建博客来记录我的生活,便一步一步踏进博客设计中.">
+  <meta name="description" content="本篇我码了一个小特效给大家. 我喜欢满天星的花,我的Ta同样喜欢(没错!左手代码右手Ta). 作为程序员,当然也要码出满天星的代码给Ta( &gt;.&lt; )">
 <meta property="og:type" content="article">
-<meta property="og:title" content="诉愁">
-<meta property="og:url" content="http://yoursite.com/2020/03/15/story1/index.html">
+<meta property="og:title" content="教你用canvas写动态满天星(精解)">
+<meta property="og:url" content="http://yoursite.com/2020/03/17/Js2/index.html">
 <meta property="og:site_name" content="sjhv的杂货店">
-<meta property="og:description" content="在大学学习一段时间后,发现自己并不喜欢自己的专业,虽然同为计算机.但我更爱设计,辗转反侧之后决定步入Web前端.断断续续半年的学习,终于熬了出来. 做计算机的总是和熬夜离不开,在深夜总是人多愁善感的时候.某一天萌生了搭建博客来记录我的生活,便一步一步踏进博客设计中.">
+<meta property="og:description" content="本篇我码了一个小特效给大家. 我喜欢满天星的花,我的Ta同样喜欢(没错!左手代码右手Ta). 作为程序员,当然也要码出满天星的代码给Ta( &gt;.&lt; )">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-15T12:16:57.077Z">
-<meta property="article:modified_time" content="2020-03-17T12:36:11.910Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200317205949316.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-03-17T13:11:39.154Z">
+<meta property="article:modified_time" content="2020-03-17T13:13:38.942Z">
 <meta property="article:author" content="sjhv-ENn">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200317205949316.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70">
 
-<link rel="canonical" href="http://yoursite.com/2020/03/15/story1/">
+<link rel="canonical" href="http://yoursite.com/2020/03/17/Js2/">
 
 
 <script id="page-configurations">
@@ -44,7 +46,7 @@
   };
 </script>
 
-  <title>诉愁 | sjhv的杂货店</title>
+  <title>教你用canvas写动态满天星(精解) | sjhv的杂货店</title>
   
 
 
@@ -195,7 +197,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/15/story1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/17/Js2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/header.jpg">
@@ -208,7 +210,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          诉愁
+          教你用canvas写动态满天星(精解)
         </h1>
 
         <div class="post-meta">
@@ -217,23 +219,17 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-03-15 20:16:57" itemprop="dateCreated datePublished" datetime="2020-03-15T20:16:57+08:00">2020-03-15</time>
+              <time title="创建时间：2020-03-17 21:11:39 / 修改时间：21:13:38" itemprop="dateCreated datePublished" datetime="2020-03-17T21:11:39+08:00">2020-03-17</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-17 20:36:11" itemprop="dateModified" datetime="2020-03-17T20:36:11+08:00">2020-03-17</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B7%B1%E5%A4%9C%E6%9C%AD%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">深夜札记</span></a>
+                  <a href="/categories/Js%E7%AF%87/" itemprop="url" rel="index"><span itemprop="name">Js篇</span></a>
                 </span>
             </span>
 
@@ -248,15 +244,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>在大学学习一段时间后,发现自己并不喜欢自己的专业,虽然同为计算机.但我更爱设计,辗转反侧之后决定步入Web前端.断断续续半年的学习,终于熬了出来.</p>
-<p>做计算机的总是和熬夜离不开,在深夜总是人多愁善感的时候.某一天萌生了搭建博客来记录我的生活,便一步一步踏进博客设计中.</p>
+        <p>本篇我码了一个小特效给大家.</p>
+<p>我喜欢满天星的花,我的Ta同样喜欢(没错!左手代码右手Ta).</p>
+<p>作为程序员,当然也要码出满天星的代码给Ta( &gt;.&lt; )</p>
 <a id="more"></a>
-<p>我觉得写博文真的是一件非常快乐的事情，虽然可能没有听众，但是把自己知道的，摸索出来的东西写下来，分享出来，并不单单是想要别人来看，更有一种记录生活的感觉。</p>
-<p>选择自己搭建个人博客，势必会走上一条曲折的道路。自己跟着教程一步步走下来，最后得到的，却也许并不是原先期望的那样。不喜欢折腾的人也许就会将就着用下去，但我倔强地坚持要得到我想要的。自己不断寻找问题，解决问题，那么在解决的那一刻真的是浑身舒畅。</p>
-<p>人们喜欢拍照，录像，通过照片与视频将生活记录下来。而我觉得，通过文字记录生活更是一个不错的选择。况且上传到博客上，说不定哪天就有人看到，留下自己的看法，或者能够一起讨论，似乎也很美好。</p>
-<p>我喜欢通过不一样的方式来让别人了解我,我喜欢听故事,也喜欢讲故事,故事里有喜有愁,有悲有感.</p>
-<p>看完故事,你还是你,我还是我. </p>
-<p>我们素不相识</p>
+<p>这个特效已经完善,喜欢的小伙伴打个赏我去买束满天星吧( 2333 )</p>
+<p><img src="https://img-blog.csdnimg.cn/20200317205949316.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nha3VyYXNqaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>上秘籍</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;ie&#x3D;edge&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        body&#123;</span><br><span class="line">            margin: 0px;</span><br><span class="line">            padding: 0px;</span><br><span class="line">        &#125;</span><br><span class="line">        .demo&#123;</span><br><span class="line">            display: block;</span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;canvas class&#x3D;&quot;demo&quot;&gt;&lt;&#x2F;canvas&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    			&#x2F;&#x2F;  逻辑思路:</span><br><span class="line">                &#x2F;&#x2F;  1 确定出我的画布</span><br><span class="line">                &#x2F;&#x2F;     1.1 获取canvas元素</span><br><span class="line">                &#x2F;&#x2F;     1.2 确定我的画布大小</span><br><span class="line">                &#x2F;&#x2F; 2 画出静态的圆</span><br><span class="line">                &#x2F;&#x2F;     2.1 渲染画布 开始作画</span><br><span class="line">                &#x2F;&#x2F; 3 画出动态的圆</span><br><span class="line">                &#x2F;&#x2F;    3.1 改变圆心坐标 封装函数</span><br><span class="line">                &#x2F;&#x2F;    3.2 在定时器中实现动画</span><br><span class="line">                &#x2F;&#x2F; 4 画出1314个动态圆</span><br><span class="line">                &#x2F;&#x2F;    4.1 圆的位置不一 大小不一 移动方向不一 颜色不一</span><br><span class="line">                &#x2F;&#x2F;    4.2 定义一个随机函数来操作这些不定量</span><br><span class="line">                &#x2F;&#x2F;    4.3 定义一个数组来存储每个小球的坐标</span><br><span class="line">                </span><br><span class="line">        var canvas &#x3D; document.querySelector(&quot;.demo&quot;);</span><br><span class="line">        let w,h;</span><br><span class="line">        let aColor &#x3D; [&quot;#216497&quot;,&quot;#304A5D&quot;,&quot;#A3C6E2&quot;,&quot;#EB4526&quot;,&quot;#96D924&quot;];</span><br><span class="line">        let canCon &#x3D; canvas.getContext(&quot;2d&quot;);</span><br><span class="line">        let aBubble &#x3D; [];  &#x2F;&#x2F; 定义一个变量来存取每个小球的坐标</span><br><span class="line">        </span><br><span class="line">            &#x2F;&#x2F; ~~function ()&#123;</span><br><span class="line">            &#x2F;&#x2F;     window.onresize &#x3D; arguments.callee;</span><br><span class="line">            &#x2F;&#x2F;     return ~~ function ()&#123;</span><br><span class="line">            &#x2F;&#x2F;         w &#x3D; window.innerWidth;</span><br><span class="line">            &#x2F;&#x2F;         h &#x3D; window.innerHeight;</span><br><span class="line">            &#x2F;&#x2F;         canvas.width &#x3D; w;</span><br><span class="line">            &#x2F;&#x2F;         canvas.hegiht &#x3D; h;</span><br><span class="line">            &#x2F;&#x2F;         return arguments.callee;</span><br><span class="line">            &#x2F;&#x2F;     &#125;</span><br><span class="line">            &#x2F;&#x2F; &#125;</span><br><span class="line">            &#x2F;&#x2F; canvas 的绘制区域是随浏览器的窗口的变化而变化的  不写window.onresize  在浏览器刷新一次后  canvas的绘制区域就会变化</span><br><span class="line">            </span><br><span class="line">             function setColor()&#123;</span><br><span class="line">                window.onresize &#x3D; setColor;</span><br><span class="line">                w &#x3D; window.innerWidth;</span><br><span class="line">                h &#x3D; window.innerHeight;</span><br><span class="line">                canvas.width &#x3D; w;</span><br><span class="line">                canvas.height &#x3D; h;</span><br><span class="line">            &#125; </span><br><span class="line">            setColor();</span><br><span class="line">             &#x2F;&#x2F; 设置绘制区域的大小</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 定义一个随机函数</span><br><span class="line">             function random(min,max)&#123;</span><br><span class="line">                 return Math.random()*(max-min)+min;</span><br><span class="line">             &#125;</span><br><span class="line"></span><br><span class="line">             &#x2F;&#x2F; 设定圆的形状,颜色</span><br><span class="line">             function Bubble()&#123;</span><br><span class="line">                 this.x &#x3D; random(0,w);</span><br><span class="line">                 this.y &#x3D; random(0,h);</span><br><span class="line">                 this.r &#x3D; random(1,3);</span><br><span class="line">                 this.color &#x3D; aColor[Math.floor(random(0,5))]; </span><br><span class="line">                 this.vx &#x3D; random(-2,2);</span><br><span class="line">                 this.vy &#x3D; random(-2,2);</span><br><span class="line">             &#125;</span><br><span class="line"></span><br><span class="line">             &#x2F;&#x2F; 画圆的函数</span><br><span class="line">             Bubble.prototype.draw &#x3D; function()&#123;</span><br><span class="line">                 canCon.beginPath();  &#x2F;&#x2F; 抬笔</span><br><span class="line">                 canCon.fillStyle &#x3D; this.color; &#x2F;&#x2F; 拿笔沾墨</span><br><span class="line">                 canCon.arc(this.x,this.y,this.r,0,Math.PI*2); &#x2F;&#x2F; 决定在哪里画 画多大 怎么画</span><br><span class="line">                 canCon.fill(); &#x2F;&#x2F;下笔</span><br><span class="line">             &#125;</span><br><span class="line"></span><br><span class="line">             &#x2F;&#x2F; 小圆的位置变化函数</span><br><span class="line">             Bubble.prototype.update &#x3D; function()&#123;</span><br><span class="line">                 this.x+&#x3D;this.vx;</span><br><span class="line">                 this.y+&#x3D;this.vy;</span><br><span class="line">                 if(this.x&lt;this.r || this.x+this.r&gt;w)&#123;</span><br><span class="line">                     this.vx &#x3D; -this.vx;</span><br><span class="line">                 &#125;</span><br><span class="line">                 if(this.y&lt;this.r || this.y+this.r&gt;h)&#123;</span><br><span class="line">                     this.vy &#x3D; -this.vy</span><br><span class="line">                 &#125;  &#x2F;&#x2F; 碰撞算法  </span><br><span class="line">                 this.draw();</span><br><span class="line">             &#125;</span><br><span class="line"></span><br><span class="line">             &#x2F;&#x2F; 画1000个小圆的函数</span><br><span class="line">             </span><br><span class="line">             function creatBubble(num)&#123;</span><br><span class="line">                 for(let i&#x3D;0;i&lt;num;i++)&#123;</span><br><span class="line">                   let bubble &#x3D; new Bubble(); </span><br><span class="line">                    bubble.draw();</span><br><span class="line">                    aBubble.push(bubble);  &#x2F;&#x2F;非常重要 </span><br><span class="line">                 &#125;</span><br><span class="line">             &#125;</span><br><span class="line">             creatBubble(1314);</span><br><span class="line"></span><br><span class="line">             &#x2F;&#x2F; 用定时器实现动画</span><br><span class="line">             setInterval(function()&#123;</span><br><span class="line">                 canCon.clearRect(0,0,w,h);</span><br><span class="line">                aBubble.forEach(function(item,index,array)&#123;</span><br><span class="line">                    item.update();</span><br><span class="line">                &#125;)</span><br><span class="line">             &#125;,1000&#x2F;60)</span><br><span class="line">             &#x2F;&#x2F;  这里在调用update时 我们是需要小球的坐标的  如果没有aBubble 这里是找不到的   所以要定义一个aBubble来 </span><br><span class="line">            </span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -292,7 +287,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2020/03/15/story1/" title="诉愁">http://yoursite.com/2020/03/15/story1/</a>
+    <a href="http://yoursite.com/2020/03/17/Js2/" title="教你用canvas写动态满天星(精解)">http://yoursite.com/2020/03/17/Js2/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-Hans" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -309,13 +304,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/03/15/github_hexo/" rel="prev" title="hexo+github博客搭建">
-      <i class="fa fa-chevron-left"></i> hexo+github博客搭建
+    <a href="/2020/03/17/Js1/" rel="prev" title="教你打造网易云3D图片轮播(精解)">
+      <i class="fa fa-chevron-left"></i> 教你打造网易云3D图片轮播(精解)
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/03/16/talk1/" rel="next" title="前端学习心得">
-      前端学习心得 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
