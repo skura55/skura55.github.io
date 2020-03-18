@@ -20,15 +20,19 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="sjhv的杂货店">
-<meta property="og:url" content="http://yoursite.com/archives/2020/03/page/2/index.html">
+  <meta name="description" content="最近在写node.js. 所以疯狂的码原生Js. 作为娱乐项目,给大家码点东西助助兴. 由于本章代码实现过于简约(懒得写css),我就直接上代码吧 喜欢的小伙伴请小博主喝杯咖啡吧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="教你用Js实现鼠标拖拽单个物体(精解)">
+<meta property="og:url" content="http://yoursite.com/2020/03/18/Js4/index.html">
 <meta property="og:site_name" content="sjhv的杂货店">
+<meta property="og:description" content="最近在写node.js. 所以疯狂的码原生Js. 作为娱乐项目,给大家码点东西助助兴. 由于本章代码实现过于简约(懒得写css),我就直接上代码吧 喜欢的小伙伴请小博主喝杯咖啡吧">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-18T04:50:28.631Z">
+<meta property="article:modified_time" content="2020-03-18T04:50:43.940Z">
 <meta property="article:author" content="sjhv-ENn">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/archives/2020/03/page/2/">
+<link rel="canonical" href="http://yoursite.com/2020/03/18/Js4/">
 
 
 <script id="page-configurations">
@@ -36,11 +40,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false
+    isPost : true
   };
 </script>
 
-  <title>归档 | sjhv的杂货店</title>
+  <title>教你用Js实现鼠标拖拽单个物体(精解) | sjhv的杂货店</title>
   
 
 
@@ -186,176 +190,152 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/18/Js4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="sjhv-ENn">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sjhv的杂货店">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          教你用Js实现鼠标拖拽单个物体(精解)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-18 12:50:28 / 修改时间：12:50:43" itemprop="dateCreated datePublished" datetime="2020-03-18T12:50:28+08:00">2020-03-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Js%E7%AF%87/" itemprop="url" rel="index"><span itemprop="name">Js篇</span></a>
+                </span>
+            </span>
+
+          
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 19 篇日志。 继续努力。</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/03/18/Js4/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/18/Js4/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
-    </div>
+        <p>最近在写node.js. 所以疯狂的码原生Js. 作为娱乐项目,给大家码点东西助助兴.</p>
+<p>由于本章代码实现过于简约(懒得写css),我就直接上代码吧</p>
+<p>喜欢的小伙伴请小博主喝杯咖啡吧</p>
+<a id="more"></a>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-17T14:01:09+08:00"
-              content="2020-03-17">
-          03-17
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/17/talk2/" itemprop="url">
-            <span itemprop="name">一起互窜博客吧</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-17T13:46:52+08:00"
-              content="2020-03-17">
-          03-17
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/17/hexo2/" itemprop="url">
-            <span itemprop="name">hexo高级(博客收录到百度)</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-17T13:29:15+08:00"
-              content="2020-03-17">
-          03-17
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/17/vue2/" itemprop="url">
-            <span itemprop="name">Vue学习篇(指令篇)</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-16T15:50:08+08:00"
-              content="2020-03-16">
-          03-16
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/16/vue1/" itemprop="url">
-            <span itemprop="name">Vue学习篇(介绍)</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-16T15:32:55+08:00"
-              content="2020-03-16">
-          03-16
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/16/hexo1/" itemprop="url">
-            <span itemprop="name">hexo进阶(功能添加)</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-16T11:43:51+08:00"
-              content="2020-03-16">
-          03-16
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/16/talk1/" itemprop="url">
-            <span itemprop="name">前端学习心得</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-15T20:16:57+08:00"
-              content="2020-03-15">
-          03-15
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/15/story1/" itemprop="url">
-            <span itemprop="name">诉愁</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
+<p><strong>上秘籍</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;ie&#x3D;edge&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        body&#123;</span><br><span class="line">            margin: 0px;</span><br><span class="line">            padding: 0px;</span><br><span class="line">        &#125;</span><br><span class="line">        .demo&#123;</span><br><span class="line">            width: 200px;</span><br><span class="line">            height: 200px;</span><br><span class="line">            background-color: skyblue;</span><br><span class="line">            margin: 200px auto;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;demo&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var demo &#x3D; document.querySelector(&quot;.demo&quot;); &#x2F;&#x2F; 先获取目标元素</span><br><span class="line">        demo.addEventListener(&quot;mousedown&quot;,fn);</span><br><span class="line">        demo.addEventListener(&quot;mousemove&quot;,fn);</span><br><span class="line">        demo.addEventListener(&quot;mouseup&quot;,fn);  &#x2F;&#x2F;监听目标元素的三种动作  因为是拖拽  会有鼠标的按下 移动 抬起 所以要监听三种动作</span><br><span class="line">                                              &#x2F;&#x2F; 三个动作有自己的函数  写在一起 称为节流  提高代码的效率</span><br><span class="line">            var toggle &#x3D; false; &#x2F;&#x2F;定义一个判断量  我们要点击目标才有效 不设置判断条件 我们在页面任意地方按下鼠标都会触发fn函数</span><br><span class="line">            var x1,y1;</span><br><span class="line">            var startx&#x3D;0,starty&#x3D;0; &#x2F;&#x2F; 定义变量用来存储我们第一次移动完后最后的坐标  最开始为0</span><br><span class="line">            var x2,y2;  &#x2F;&#x2F;定义两个新变量 来存取我们移动时的坐标</span><br><span class="line">          function fn(ev)&#123;</span><br><span class="line">              switch (ev.type)&#123;</span><br><span class="line">                &#x2F;&#x2F; ev是全局量 里面有很多操作函数（offset client 等）  我们可以获取ev 在调用里面的函数   </span><br><span class="line">                &#x2F;&#x2F; ev.type就是全局量的名字 是什么操作触发的全局量</span><br><span class="line">                case &quot;mousedown&quot;:</span><br><span class="line">                    &#x2F;&#x2F; if(ev.target.tagName &#x3D;&#x3D;&#x3D; &quot;DIV&quot;)&#123; &#x2F;&#x2F; target 是受到点击的属性 tagName是属性名字  在控制台里 tagName默认为大写</span><br><span class="line">                        toggle &#x3D; true;</span><br><span class="line">                        &#x2F;&#x2F; console.log(ev.target.tagName);</span><br><span class="line">                        x1 &#x3D; ev.clientX;</span><br><span class="line">                        y1 &#x3D; ev.clientY; </span><br><span class="line">                        console.log(x1,y1)</span><br><span class="line">                        &#x2F;&#x2F; 用x1 ，y1 来接收ev里面的client 把我们的触发点坐标存起来</span><br><span class="line">                        &#x2F;&#x2F;这里的toggle是用来提高函数的兼容性的  这样就不会有bug出现  不然会出现点击随机位置demo也会移动的情况</span><br><span class="line">                    break;</span><br><span class="line">                case &quot;mousemove&quot;:</span><br><span class="line">                    if(toggle)&#123;</span><br><span class="line">                    x2 &#x3D; ev.clientX;</span><br><span class="line">                    y2 &#x3D; ev.clientY;</span><br><span class="line">                    demo.style.transform &#x3D; &quot;translate(&quot;+(parseInt(startx)+x2-x1)+&quot;px,&quot;+(parseInt(starty)+y2-y1)+&quot;px)&quot;;</span><br><span class="line">                    </span><br><span class="line">                    &#125;</span><br><span class="line">                    &#x2F;&#x2F;我们目标移动的位置 是x2-x1  y2-y1  这是第一次的移动  start x y   作为最后的坐标我们要存起来 方便下一次移动</span><br><span class="line">                    break;</span><br><span class="line">                case &quot;mouseup&quot;:</span><br><span class="line">                    toggle &#x3D; false;</span><br><span class="line">                    startx &#x3D; parseInt(startx)+x2-x1;</span><br><span class="line">                    starty &#x3D; parseInt(starty)+y2-y1;</span><br><span class="line">                    break;</span><br><span class="line">                &#x2F;&#x2F; 选用switch 语句 可以提高函数的效率  因为我们监听的动作都是采用同一个函数   这里称为分流  </span><br><span class="line">                &#x2F;&#x2F; switch就想一个地铁入口，去哪里的人都要先经过入口（fn函数） 进去之后选择不同的地铁（mousedown up move） </span><br><span class="line">                &#x2F;&#x2F; 这样代码简洁  高效</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
 
     </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>赠人玫瑰,手有余香</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wx.png" alt="sjhv-ENn 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/zfb.png" alt="sjhv-ENn 支付宝">
+        <p>支付宝</p>
+      </div>
+
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>sjhv-ENn
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2020/03/18/Js4/" title="教你用Js实现鼠标拖拽单个物体(精解)">http://yoursite.com/2020/03/18/Js4/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-Hans" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/18/Js3/" rel="prev" title="教你写图片价格随机排序(精解)">
+      <i class="fa fa-chevron-left"></i> 教你写图片价格随机排序(精解)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/03/18/Js5/" rel="next" title="Js鼠标拖拽进阶----多个拖拽(精解)">
+      Js鼠标拖拽进阶----多个拖拽(精解) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
   
   
   
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2020/03/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/archives/2020/03/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2020/03/page/3/">3</a><a class="extend next" rel="next" href="/archives/2020/03/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
+  </div>
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
