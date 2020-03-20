@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>友链+</title>
+    <url>/2020/03/20/talk2/</url>
+    <content><![CDATA[<p><strong>交换友链请先添加本站为友链</strong></p>
+<pre><code>本站名称: sjhv的杂货店
+本站网址: https://www.sjhv.top/</code></pre><a id="more"></a>
+<p><strong>在留言板留下贵站的地址和名称以及个人邮箱,小博主确认后会立即添加并以邮件形式告知</strong><br><strong>欢迎回访互窜</strong></p>
+]]></content>
+      <categories>
+        <category>话不投机半句多</category>
+      </categories>
+      <tags>
+        <tag>+</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Js文档修改重置功能(简解)</title>
     <url>/2020/03/19/Js6/</url>
     <content><![CDATA[<p>今天给大家介绍的是由Js写的文档修改重置功能,本章介绍的内容应该比较简单,只有一个存在内存里和实时更新的问题,这里相当于快照(应该可以这样理解).</p>
@@ -17,6 +32,9 @@
       <categories>
         <category>Js篇</category>
       </categories>
+      <tags>
+        <tag>Js</tag>
+      </tags>
   </entry>
   <entry>
     <title>惊喜</title>
@@ -33,6 +51,9 @@
       <categories>
         <category>深夜札记</category>
       </categories>
+      <tags>
+        <tag>story</tag>
+      </tags>
   </entry>
   <entry>
     <title>敞怀</title>
@@ -52,6 +73,9 @@
       <categories>
         <category>深夜札记</category>
       </categories>
+      <tags>
+        <tag>story</tag>
+      </tags>
   </entry>
   <entry>
     <title>静态网页----阴阳师(两张)</title>
@@ -69,6 +93,9 @@
       <categories>
         <category>静态网页项目</category>
       </categories>
+      <tags>
+        <tag>静态项目</tag>
+      </tags>
   </entry>
   <entry>
     <title>Js鼠标拖拽进阶----多个拖拽(精解)</title>
@@ -85,6 +112,9 @@
       <categories>
         <category>Js篇</category>
       </categories>
+      <tags>
+        <tag>Js</tag>
+      </tags>
   </entry>
   <entry>
     <title>教你用Js实现鼠标拖拽单个物体(精解)</title>
@@ -100,6 +130,9 @@
       <categories>
         <category>Js篇</category>
       </categories>
+      <tags>
+        <tag>Js</tag>
+      </tags>
   </entry>
   <entry>
     <title>教你写图片价格随机排序(精解)</title>
@@ -117,6 +150,9 @@
       <categories>
         <category>Js篇</category>
       </categories>
+      <tags>
+        <tag>Js</tag>
+      </tags>
   </entry>
   <entry>
     <title>hexo评论系统精选</title>
@@ -142,6 +178,9 @@
       <categories>
         <category>Hexo</category>
       </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>教你用canvas写动态满天星(精解)</title>
@@ -158,6 +197,9 @@
       <categories>
         <category>Js篇</category>
       </categories>
+      <tags>
+        <tag>Js</tag>
+      </tags>
   </entry>
   <entry>
     <title>教你打造网易云3D图片轮播(精解)</title>
@@ -179,6 +221,9 @@
       <categories>
         <category>Js篇</category>
       </categories>
+      <tags>
+        <tag>Js</tag>
+      </tags>
   </entry>
   <entry>
     <title>归澈</title>
@@ -197,6 +242,9 @@
       <categories>
         <category>深夜札记</category>
       </categories>
+      <tags>
+        <tag>story</tag>
+      </tags>
   </entry>
   <entry>
     <title>hexo高级(博客收录到百度)</title>
@@ -210,6 +258,9 @@
       <categories>
         <category>Hexo</category>
       </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>Vue学习篇(指令篇)</title>
@@ -233,6 +284,9 @@
       <categories>
         <category>Vue</category>
       </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
   </entry>
   <entry>
     <title>Vue学习篇(介绍)</title>
@@ -247,6 +301,9 @@
       <categories>
         <category>Vue</category>
       </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
   </entry>
   <entry>
     <title>hexo进阶(功能添加)</title>
@@ -269,6 +326,9 @@
       <categories>
         <category>Hexo</category>
       </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>前端学习心得</title>
@@ -284,7 +344,7 @@
         <category>话不投机半句多</category>
       </categories>
       <tags>
-        <tag>+</tag>
+        <tag>talk</tag>
       </tags>
   </entry>
   <entry>
@@ -303,6 +363,9 @@
       <categories>
         <category>深夜札记</category>
       </categories>
+      <tags>
+        <tag>story</tag>
+      </tags>
   </entry>
   <entry>
     <title>hexo+github博客搭建</title>
@@ -335,6 +398,9 @@
       <categories>
         <category>Hexo</category>
       </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>hexo绑定域名</title>
@@ -351,6 +417,9 @@
       <categories>
         <category>Hexo</category>
       </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>hexo部署优化(hexo+coding+github)</title>
@@ -371,5 +440,8 @@
       <categories>
         <category>Hexo</category>
       </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
 </search>
