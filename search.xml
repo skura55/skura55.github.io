@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>世界拿痛吻我,我以微笑挽歌</title>
+    <url>/2020/03/24/talk4/</url>
+    <content><![CDATA[<p>今天无意在找电影看的时候,重温了一遍英雄本色. 可能里面的台词太触动我了吧. 总有一些东西,得亲手拿回来.</p>
+<p>大树长根十年只为茂盛. 你呢?</p>
+]]></content>
+      <categories>
+        <category>话不投机半句多</category>
+      </categories>
+  </entry>
+  <entry>
     <title>浅析CSRF漏洞攻击</title>
     <url>/2020/03/24/web1/</url>
     <content><![CDATA[<p>当你学到越来越多的信息安全知识的时候,你会发现很多电子设备都是不可靠的.因为太容易被支配或者被侵入了.这几天做了一点CSRF方面的实验.今天给小伙伴们讲讲这方面的知识.</p>
