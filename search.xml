@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>爬取图片</title>
+    <url>//articles/pc1.html</url>
+    <content><![CDATA[<p>网络爬虫（又称为网页蜘蛛，网络机器人，在FOAF社区中间，更经常的称为网页追逐者），是一种按照一定的规则，自动地抓取万维网信息的程序或者脚本。</p>
+<p>有很多语言可以爬虫 —–Python,node.js等,我简单说下node的爬取过程吧.</p>
+<a id="more"></a>
+<p><del>我用的网站是写真的,不喜欢的同志换成自己喜欢的网址爬取!</del> </p>
+<p><strong>单张图片爬取</strong><br>采用request来爬取用到了fs模块,管道流获取数据</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const request &#x3D; require(&#39;request&#39;);</span><br><span class="line">const fs &#x3D; require(&#39;fs&#39;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;单张爬虫</span><br><span class="line">request(&quot;https:&#x2F;&#x2F;mtl.gzhuibei.com&#x2F;images&#x2F;img&#x2F;21077&#x2F;1.jpg&quot;).pipe(</span><br><span class="line">    fs.createWriteStream(&quot;.&#x2F;img&#x2F;mn.jpg&quot;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p><strong>一个单独页面全图片爬取</strong><br>用到了正则匹配,贪婪获取,全局获取<br>如果明白建议度娘,一两句话也说不明白的.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">request.get(&#123;</span><br><span class="line">    url:&#39;https:&#x2F;&#x2F;www.meitulu.com&#x2F;item&#x2F;12804.html&#39;</span><br><span class="line">&#125;,( err,res,body )&#x3D;&gt;&#123;</span><br><span class="line">    if( err )return ;</span><br><span class="line">    let reg &#x3D; &#x2F;https:\&#x2F;\&#x2F;mtl.gzhuibei.com\&#x2F;images\&#x2F;img\&#x2F;12804\&#x2F;\d+\.(jpg|png)&#x2F;g;</span><br><span class="line">    let arr &#x3D; body.match( reg )</span><br><span class="line">    if( arr )&#123;</span><br><span class="line">        arr.forEach( (ele ,index)&#x3D;&gt; &#123;</span><br><span class="line">            request( ele ).pipe( </span><br><span class="line">                fs.createWriteStream(&quot;.&#x2F;img&#x2F;&quot;+index+&#39;.jpg&#39;)</span><br><span class="line">            )</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>一套写真爬取</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">let index &#x3D; 0;</span><br><span class="line">for( let i&#x3D;1;i&lt;&#x3D;12;i++)&#123;</span><br><span class="line">    let url &#x3D; &quot;&quot;;</span><br><span class="line">    if(i &#x3D;&#x3D;&#x3D; 1)&#123;</span><br><span class="line">        url &#x3D; &quot;https:&#x2F;&#x2F;www.meitulu.com&#x2F;item&#x2F;12804.html&quot;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        url &#x3D; &#96;https:&#x2F;&#x2F;www.meitulu.com&#x2F;item&#x2F;12804_$&#123;i&#125;.html&#96;</span><br><span class="line">    &#125;</span><br><span class="line">    request.get(&#123;</span><br><span class="line">        url</span><br><span class="line">    &#125;,(err,res,body)&#x3D;&gt;&#123;</span><br><span class="line">        if(err)return;</span><br><span class="line">        let reg &#x3D; &#x2F;https:\&#x2F;\&#x2F;mtl.gzhuibei.com\&#x2F;images\&#x2F;img\&#x2F;12804\&#x2F;\d+\.(jpg|png)&#x2F;g;</span><br><span class="line">        let arr &#x3D; body.match( reg )</span><br><span class="line">        if( arr )&#123;</span><br><span class="line">            arr.forEach( ele&#x3D;&gt; &#123;  </span><br><span class="line">                request( ele ).pipe( </span><br><span class="line">                    fs.createWriteStream(&quot;.&#x2F;img1&#x2F;&quot;+(index++)+&#39;.jpg&#39;)</span><br><span class="line">                )</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+  </entry>
+  <entry>
     <title>愿你三冬暖</title>
     <url>//articles/talk6.html</url>
     <content><![CDATA[<p>“从前慢,车马邮寄都慢,一生只爱一人.”  出自木心 ——《从前慢》<br>你如今怎样在生活呢?<br>生活苦涩,依旧要过下去呀.<br> 圆满了前半生才有故事讲给孩子听.</p>
@@ -496,8 +514,6 @@
 <p>我觉得写博文真的是一件非常快乐的事情，虽然可能没有听众，但是把自己知道的，摸索出来的东西写下来，分享出来，并不单单是想要别人来看，更有一种记录生活的感觉。</p>
 <p>选择自己搭建个人博客，势必会走上一条曲折的道路。自己跟着教程一步步走下来，最后得到的，却也许并不是原先期望的那样。不喜欢折腾的人也许就会将就着用下去，但我倔强地坚持要得到我想要的。自己不断寻找问题，解决问题，那么在解决的那一刻真的是浑身舒畅。</p>
 <p>人们喜欢拍照，录像，通过照片与视频将生活记录下来。而我觉得，通过文字记录生活更是一个不错的选择。况且上传到博客上，说不定哪天就有人看到，留下自己的看法，或者能够一起讨论，似乎也很美好。</p>
-<p>我喜欢通过不一样的方式来让别人了解我,我喜欢听故事,也喜欢讲故事,故事里有喜有愁,有悲有感.</p>
-<p>看完故事,你还是你,我还是我. 我们素不相识</p>
 ]]></content>
       <categories>
         <category>深夜札记</category>
