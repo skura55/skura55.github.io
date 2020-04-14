@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>爬取小说</title>
+    <url>//articles/pc2.html</url>
+    <content><![CDATA[<p>爬虫的简介在上一章就已经介绍了,网上也有很多的参考.<br>生活有点无聊.<br>爬个小说来看看<br>用到了cheerio request fs模块.  模块的内容我建议度娘,有很详细的介绍</p>
+<a id="more"></a>
+<p><strong>单章爬取</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 爬取一个网页中的小说内容</span><br><span class="line">request.get(&quot;http:&#x2F;&#x2F;book.zongheng.com&#x2F;chapter&#x2F;957220&#x2F;60179232.html&quot;,(err,res,body)&#x3D;&gt;&#123;</span><br><span class="line">    if(err) return;</span><br><span class="line">    const $ &#x3D;cheerio.load(body);</span><br><span class="line">    console.log($(&quot;.content p&quot;).text());</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>多章爬取</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 爬多章节内容</span><br><span class="line">request.get(&quot;http:&#x2F;&#x2F;book.zongheng.com&#x2F;chapter&#x2F;957220&#x2F;60179232.html&quot;,(err,res,body)&#x3D;&gt;&#123;</span><br><span class="line">    if(err) return;</span><br><span class="line">    const $ &#x3D;cheerio.load(body);</span><br><span class="line">    &#x2F;&#x2F; console.log($(&quot;.content p&quot;).text());</span><br><span class="line">    $(&quot;.col-4 a&quot;).each(function(index)&#123;</span><br><span class="line">        console.log($(this).prop(&quot;href&quot;))</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    function article(url,index)&#123;</span><br><span class="line">        request.get(url,(err,res,body)&#x3D;&gt;&#123;</span><br><span class="line">            if(err) return;</span><br><span class="line">            const $ &#x3D;cheerio.load(body);</span><br><span class="line"></span><br><span class="line">            let txt &#x3D; $(&quot;.content&quot;).text();</span><br><span class="line">            txt &#x3D; txt.replace(</span><br><span class="line">                &#x2F;(\s&#123;2,&#125;)&#x2F;g,</span><br><span class="line">                $a &#x3D;&gt; &quot;\r&quot;+$a</span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">            fs.writeFileSync(</span><br><span class="line">                &quot;.&#x2F;littlestory&#x2F;&quot;+(index+1)+&quot;.txt&quot;,</span><br><span class="line">                txt</span><br><span class="line">            )</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+  </entry>
+  <entry>
     <title>爬取图片</title>
     <url>//articles/pc1.html</url>
     <content><![CDATA[<p>网络爬虫（又称为网页蜘蛛，网络机器人，在FOAF社区中间，更经常的称为网页追逐者），是一种按照一定的规则，自动地抓取万维网信息的程序或者脚本。</p>
