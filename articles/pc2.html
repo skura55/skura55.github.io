@@ -21,18 +21,18 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.sjhv.top","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"www.sjhv.top","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="爬虫的简介在上一章就已经介绍了,网上也有很多的参考.生活有点无聊.爬个小说来看看用到了cheerio request fs模块.  模块的内容我建议度娘,有很详细的介绍">
+  <meta name="description" content="爬虫的简介在上一章就已经介绍了,网上也有很多的参考.生活有点无聊.爬个小说来看看用到了cheerio request fs模块.  模块的内容我建议度娘,有很详细的介绍 单章爬取 123456&#x2F;&#x2F; 爬取一个网页中的小说内容request.get(&quot;http:&#x2F;&#x2F;book.zongheng.com&#x2F;chapter&#x2F;957220&amp;#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="爬取小说">
 <meta property="og:url" content="https://www.sjhv.top/articles/pc2.html">
 <meta property="og:site_name" content="sjhv的杂货店">
-<meta property="og:description" content="爬虫的简介在上一章就已经介绍了,网上也有很多的参考.生活有点无聊.爬个小说来看看用到了cheerio request fs模块.  模块的内容我建议度娘,有很详细的介绍">
+<meta property="og:description" content="爬虫的简介在上一章就已经介绍了,网上也有很多的参考.生活有点无聊.爬个小说来看看用到了cheerio request fs模块.  模块的内容我建议度娘,有很详细的介绍 单章爬取 123456&#x2F;&#x2F; 爬取一个网页中的小说内容request.get(&quot;http:&#x2F;&#x2F;book.zongheng.com&#x2F;chapter&#x2F;957220&amp;#">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-04-14T14:45:24.931Z">
-<meta property="article:modified_time" content="2020-04-14T14:45:32.487Z">
+<meta property="article:modified_time" content="2020-06-26T15:59:03.311Z">
 <meta property="article:author" content="sjhv-ENn">
 <meta property="article:tag" content="个人博客">
 <meta name="twitter:card" content="summary">
@@ -136,7 +136,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">35</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">36</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -219,10 +219,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-04-14 22:45:24 / 修改时间：22:45:32" itemprop="dateCreated datePublished" datetime="2020-04-14T22:45:24+08:00">2020-04-14</time>
+              <time title="创建时间：2020-04-14 22:45:24" itemprop="dateCreated datePublished" datetime="2020-04-14T22:45:24+08:00">2020-04-14</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-26 23:59:03" itemprop="dateModified" datetime="2020-06-26T23:59:03+08:00">2020-06-26</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -259,9 +265,9 @@
 
       
         <p>爬虫的简介在上一章就已经介绍了,网上也有很多的参考.<br>生活有点无聊.<br>爬个小说来看看<br>用到了cheerio request fs模块.  模块的内容我建议度娘,有很详细的介绍</p>
-<a id="more"></a>
 <p><strong>单章爬取</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 爬取一个网页中的小说内容</span><br><span class="line">request.get(&quot;http:&#x2F;&#x2F;book.zongheng.com&#x2F;chapter&#x2F;957220&#x2F;60179232.html&quot;,(err,res,body)&#x3D;&gt;&#123;</span><br><span class="line">    if(err) return;</span><br><span class="line">    const $ &#x3D;cheerio.load(body);</span><br><span class="line">    console.log($(&quot;.content p&quot;).text());</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 
 <p><strong>多章爬取</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 爬多章节内容</span><br><span class="line">request.get(&quot;http:&#x2F;&#x2F;book.zongheng.com&#x2F;chapter&#x2F;957220&#x2F;60179232.html&quot;,(err,res,body)&#x3D;&gt;&#123;</span><br><span class="line">    if(err) return;</span><br><span class="line">    const $ &#x3D;cheerio.load(body);</span><br><span class="line">    &#x2F;&#x2F; console.log($(&quot;.content p&quot;).text());</span><br><span class="line">    $(&quot;.col-4 a&quot;).each(function(index)&#123;</span><br><span class="line">        console.log($(this).prop(&quot;href&quot;))</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    function article(url,index)&#123;</span><br><span class="line">        request.get(url,(err,res,body)&#x3D;&gt;&#123;</span><br><span class="line">            if(err) return;</span><br><span class="line">            const $ &#x3D;cheerio.load(body);</span><br><span class="line"></span><br><span class="line">            let txt &#x3D; $(&quot;.content&quot;).text();</span><br><span class="line">            txt &#x3D; txt.replace(</span><br><span class="line">                &#x2F;(\s&#123;2,&#125;)&#x2F;g,</span><br><span class="line">                $a &#x3D;&gt; &quot;\r&quot;+$a</span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">            fs.writeFileSync(</span><br><span class="line">                &quot;.&#x2F;littlestory&#x2F;&quot;+(index+1)+&quot;.txt&quot;,</span><br><span class="line">                txt</span><br><span class="line">            )</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -399,7 +405,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
